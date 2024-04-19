@@ -1,0 +1,22 @@
+[
+    {
+        "email": "airflowadmin@example.com",
+        "firstname": "Airflow",
+        "id": 1,
+        "lastname": "Admin",
+        "roles": [
+            "Admin"
+        ],
+        "username": "airflow"
+    },
+    {
+        "email": "dsa@dsa.com",
+        "firstname": "dsa",
+        "id": 2,
+        "lastname": "de",
+        "roles": [
+            "Admin"
+        ],
+        "username": "dsa"
+    }
+]
