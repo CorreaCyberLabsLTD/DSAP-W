@@ -1,5 +1,5 @@
 # Usando uma imagem base específica e nomeando o estágio de construção
-FROM apache/airflow:2.9.0-python3.11 as build
+FROM apache/airflow:latest-python3.12 as build
 
 # Definindo o usuário root para instalação de pacotes necessários
 USER root
@@ -20,10 +20,10 @@ RUN pip install --upgrade pip
 
 
 # Copiando e instalando pacotes e dependências Python
-COPY  soar-1.13.0-py3-none-any.whl .
-COPY  meuprojeto-0.0.0-py3-none-any.whl .
-RUN pip install /opt/airflow/*.whl \
-    && pip install connexion[swagger-ui] \
+# CorreaLabs Dependencia
+RUN pip3 install sadif
+
+RUN pip install connexion[swagger-ui] \
        apache-airflow-providers-mongo \
        apache-airflow-providers-mysql \
        apache-airflow-providers-neo4j \
@@ -31,7 +31,6 @@ RUN pip install /opt/airflow/*.whl \
        apache-airflow-providers-telegram
 
 
-RUN pip install "apache-airflow[celery]==2.9.0" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.0/constraints-3.11.txt"
 
 # Copiando arquivos de configuração
 COPY config/ /opt/airflow/config/

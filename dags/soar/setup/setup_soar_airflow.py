@@ -1,12 +1,12 @@
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
-from soar.config.soar_config import SoarConfiguration
+from sadif.config.soar_config import SadifConfiguration
 from airflow.models import Variable
 
 # Define the Python function
 def update_airflow_vars():
-    soar_config = SoarConfiguration()
+    soar_config = SadifConfiguration()
     soar_config.update_airflow_variables()
 
 # Define default arguments for the DAG
