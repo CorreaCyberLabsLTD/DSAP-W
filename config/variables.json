@@ -3,7 +3,7 @@
     "EMAIL_SETUP_MANAGER": [""],
     "EMAIL_SOAR_MONITORING": [""],
     "THEHIVE": "http://localhost:9000/api",
-    "THEHIVE_API_SERVICE": "YNv1jmR5IpBKJAfd6CWx6Py58HYX+Xqd",
+    "THEHIVE_API_SERVICE": "",
     "ROUTER_PROXY_HTTP": "127.0.0.1:5566",
     "ROUTER_PROXY_HTTPS": "127.0.0.1:5566",
     "MONGODB_URL": "mongodb://localhost:27017",
